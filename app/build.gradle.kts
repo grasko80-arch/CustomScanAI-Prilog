@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.kotlin.compose) // <-- добавлен плагин компилятора Compose
 }
 
 android {
@@ -32,6 +33,11 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
+        // добавлены opt-in флаги для экспериментальных Material API
+        freeCompilerArgs += listOf(
+            "-Xopt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+            "-Xopt-in=androidx.compose.material.ExperimentalMaterialApi"
+        )
     }
     buildFeatures {
         compose = true
@@ -46,6 +52,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.15.0") // обновлено
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.0") // обновлено
     implementation("androidx.activity:activity-compose:1.9.1") // обновлено
+    implementation("com.google.android.material:material:1.9.0")
 
     // Jetpack Compose (актуальный BOM)
     implementation(platform("androidx.compose:compose-bom:2025.09.00"))

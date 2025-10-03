@@ -1,15 +1,16 @@
+﻿# Gradle
+.gradle/
+build/
+
+# Android/IDE
 *.iml
-.gradle
+/.idea/
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+
+# OS
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp

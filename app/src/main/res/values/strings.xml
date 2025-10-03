@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Название приложения -->
+    <string name="app_name">CustomScanApp</string>
+
+    <!-- Поля ввода -->
+    <string name="from_country">From Country</string>
+    <string name="to_country">To Country</string>
+    <string name="border_type">Border Type</string>
+    <string name="item_keyword">Item Keyword</string>
+
+    <!-- Кнопка -->
+    <string name="check_button">Проверить</string>
+
+    <!-- Ответ -->
+    <string name="result_default">Результат появится здесь</string>
+</resources>
